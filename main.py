@@ -55,8 +55,8 @@ print("\033[33m⁵                                                             �
 print("\033[33m⁵                    Design By Za'99                          ⁵\033[0m")
 print("\033[33m⁵                                                             ⁵\033[0m")
 print("\033[33m⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵~ BIRRUH BIDDAM NAFDIKA YA AQSHA ~⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵\033[0m")
-print("\033[96----------------------------------------------------------\033[0m")
-url = input("IP/URL: ").strip()
+print("\033[96m----------------------------------------------------------\033[0m")
+url = input("\033[92mIP/URL: \033[0m").strip()
 async def increment_view_count(session):
     try:
         async with session.get(url) as response:
