@@ -56,7 +56,7 @@ async def increment_view_count(session):
             else:
                 print("Failed ping.")
     except aiohttp.ClientError as e:
-        print("An error occurred:", e)
+        print("\033[92m[\033[0m" "\033[1m+\033[0m" "\033[92m]\033[0mAn error occurred:", e)
 
 async def main():
     connector = aiohttp.TCPConnector(limit=None) # Aktifkan penggabungan koneksi 
