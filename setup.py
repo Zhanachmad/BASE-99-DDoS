@@ -17,7 +17,7 @@ os.system("apt-get install nodej-lts")
     os.system("npm install sys")
     os.system("npm install threading")
     os.system("npm install string")
-print("Done.")
+    print("Done.")
 
 
 
