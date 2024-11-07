@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import asyncio
+import requests
 import aiohttp
+import asyncio
 import colorama
 import random
 import string 
