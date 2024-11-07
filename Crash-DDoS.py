@@ -46,7 +46,7 @@ print("\033[33m             \033[0m")
 print("\033[33m             \033[0m")
 print("\033[33m⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵           \033[0m")
 
-ask = fade.pinkred("\033[93mEnter the target IP/URL:\033[0m")
+Target = fade.pinkred("\033[93mEnter the target IP/URL:\033[0m")
 url = input("\033[93mask \033[0m")
 
 async def increment_view_count(session):
