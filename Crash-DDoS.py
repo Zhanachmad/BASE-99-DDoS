@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import asyncio
 import aiohttp
+import fade
 import os
 # Hapus command prompt berdasarkan sistem operasi
 if os.name == "nt":  # Windows
