@@ -8,13 +8,13 @@ import random
 import string 
 import time
 import os
-# Hapus command prompt berdasarkan sistem operasi
+# Clear command prompt based on the operating system
 if os.name == "nt":  # Windows
     os.system("cls")
 else:  # Unix/Linux
     os.system("clear")
 
-# Warna
+# Color
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -69,13 +69,13 @@ async def increment_view_count(session):
         print("\033[92m[\033[0m" "\033[1m+\033[0m" "\033[92m]\033[0mAn error occurred:", e)
 
 async def main():
-    connector = aiohttp.TCPConnector(limit=None) # Aktifkan penggabungan koneksi 
+    connector = aiohttp.TCPConnector(limit=None) # Enable connection pooling
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = []
-        for _ in range(19999):  # Meningkatkan jumlah permintaan bersamaan
+        for _ in range(19999):  # Increase the number of concurrent requests
             task = asyncio.create_task(increment_view_count(session))
             tasks.append(task)
-            for i in range(19999):  #  Meningkatkan jumlah permintaan bersamaan
+            for i in range(19999):  # Increase the number of concurrent requests
                 task = asyncio.create_task(increment_view_count(session))
                 tasks.append(task)
             await asyncio.gather(*tasks)
