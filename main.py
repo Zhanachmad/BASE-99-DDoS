@@ -43,12 +43,13 @@ async def increment_view_count(session):
             <do-stuff-with-data>
 
 urls  = [
-         'https://www.<url1>.com'
-         'https://www.<url2>.com'
-         .
-         .
-         . 
-         'https://www.<urlN>.com'
+         "https://github.com/",
+         "https://google.it/",
+         "https://facebook.com/",
+         "https://alibaba.com/",
+         "https://google.com/",
+         "https://youtube.com",
+         
         ]
 
 loop = asyncio.get_event_loop()
