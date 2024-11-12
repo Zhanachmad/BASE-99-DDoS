@@ -57,33 +57,31 @@ print("\033[33m⁵                                                             �
 print("\033[33m⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵~ BIRRUH BIDDAM NAFDIKA YA AQSHA ~⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵\033[0m")
 print("\033[96m----------------------------------------------------------\033[0m")
 url = input("\033[92mIP/URL: \033[0m").strip()
-url = input("\033[92mPress enter u/ melanjutkan \033[0m")
+url = input("\033[92Press Enter u/ melanjutkan:\033[0m")
 time.sleep(5),
-print("\033[96m     1\033[0m "),
+print("\033[92m... 1 \033[0m "),
 time.sleep(5),
-print("\033[92m     2\033[0m "),
+print("\033[1m..... 2 \033[0m "),
 time.sleep(5),
-print("\033[1m     3\033[0m "),
+print("\033[97m...... 3 \033[0m "),
 time.sleep(5),
-print("\033[97m     4\033[0m "),
+print("\033[95m........ 4 \033[0m "),
 time.sleep(5),
-print("\033[95m     5\033[0m"),
-time.sleep(5),
+print("\033[92m........... 5 \033[0m "),
 async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-               print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest:.0n \033[0m" )
+                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest"+:.+"0n\033[0m" )
             if response.status == 200:
-               print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest:..0n \033[0m" )
+                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest"+::..+"0n\033[0m" )
             if response.status == 200:
-               print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest:...0n \033[0m"
-    
+                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest"+:::...+"0n\033[0m" )
+            
             else:
-               print("Failed ping.")
-     except aiohttp.ClientError as e:
-                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest \033[0m" )
-        
+                print("Failed ping.")
+    except aiohttp.ClientError as e:
+        print("\033[92m[\033[1m+\033[92mAn error occurred:\033[0m", e)
 
 async def main():
     connector = aiohttp.TCPConnector(limit=None) # Enable connection pooling
