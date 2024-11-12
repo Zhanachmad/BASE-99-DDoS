@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import requests
 import aiohttp
 import asyncio
@@ -66,7 +64,7 @@ async def increment_view_count(session):
             else:
                 print("Failed ping.")
     except aiohttp.ClientError as e:
-        print("\033[92m[\033[1m+\033[92mAn error occurred:\033[0m", e)
+                print("\033[92m[\033[1m+\033[92mAn error occurred:\033[0m", e)
 
 async def main():
     connector = aiohttp.TCPConnector(limit=None) # Enable connection pooling
