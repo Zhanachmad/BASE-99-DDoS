@@ -72,11 +72,11 @@ async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest"+:.+"0n\033[0m" )
+                print("\033[92m[\033[1m+\033[92m]\033[31mSent\033[96mRequest.0n\033[0m" )
             if response.status == 200:
-                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest"+::..+"0n\033[0m" )
+                print("\033[92m[\033[1m+\033[92m]\033[31mSent\033[96mRequest  0n\033[0m" )
             if response.status == 200:
-                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: \033[96mRequest"+:::...+"0n\033[0m" )
+                print("\033[92m[\033[1m+\033[92m]\033[31mSen\033[96mRequest    0n\033[0m" )
             
             else:
                 print("Failed ping.")
