@@ -29,13 +29,35 @@ async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("\033[92m[+\033[92m]\033[31mSent\033[96mRequest\033[0m")
-            if response.status == 200:
-                print("\033[92m[+\033[92m]\033[31mSent\033[96m Request\033[0m")
-            if response.status == 200:
-                print("\033[92m[+\033[92m]\033[31mSen\033[96m   Request\033[0m")
+                
             
-            else:
+            
+            
+
+
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            if response.status == 200:
+            data = await resp.text()
+            <do-stuff-with-data>
+
+urls  = [
+         'https://www.<url1>.com'
+         'https://www.<url2>.com'
+         .
+         .
+         . 
+         'https://www.<urlN>.com'
+        ]
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(
+    asyncio.gather(
+        *(get_cards(url) for url in urls)
+        print("\033[92m[+\033[92m]\033[31mSent\033[96mRequest\033[0m")
+
+ else:
                 print("Failed ping.")
     except aiohttp.ClientError as e:
                 print("\033[92m[+\033[92m] \033[1mAn error occurred:\033[0m", e)
@@ -56,3 +78,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
