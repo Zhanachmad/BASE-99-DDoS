@@ -77,7 +77,8 @@ async def increment_view_count(session):
             else:
                 print("Failed ping.")
     except aiohttp.ClientError as e:
-        print("\033[92m[\033[1m+\033[92mAn error occurred:\033[0m", e)
+                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: " +str(u)+ "\033[96mRequest-status " +url+ "\033[0m" )
+        
 
 async def main():
     connector = aiohttp.TCPConnector(limit=None) # Enable connection pooling
