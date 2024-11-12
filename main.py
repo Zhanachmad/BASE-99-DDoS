@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import requests
 import aiohttp
 import asyncio
@@ -56,15 +58,26 @@ print("\033[33m⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵⁵~ BIRRUH BIDDAM NAFD
 print("\033[96m----------------------------------------------------------\033[0m")
 url = input("\033[92mIP/URL: \033[0m").strip()
 url = input("\033[92mdo you want to continue..?\033[0m")
+time.sleep(5),
+print("\033[96m                  1\033[0m "),
+time.sleep(5),
+print("\033[92m                  2\033[0m "),
+time.sleep(5),
+print("\033[1m                  3\033[0m "),
+time.sleep(5),
+print("\033[97m                  4\033[0m "),
+time.sleep(5),
+print("\033[95m                  5"),
+time.sleep(5),
 async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-               print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: " +str(u)+ "\033[96mRequest-status " +url+ "\033[0m" )
+                print("\033[92m[\033[1m+\033[92m]\033[31mSentPING: " +str(u)+ "\033[96mRequest-status " +url+ "\033[0m" )
             else:
                 print("Failed ping.")
-        except aiohttp.ClientError as e:
-                print("\033[92m[+\033[92m] An error occurred:\033[0m", e)
+    except aiohttp.ClientError as e:
+        print("\033[92m[\033[1m+\033[92mAn error occurred:\033[0m", e)
 
 async def main():
     connector = aiohttp.TCPConnector(limit=None) # Enable connection pooling
@@ -82,5 +95,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-
