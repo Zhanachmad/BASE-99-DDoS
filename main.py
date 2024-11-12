@@ -25,18 +25,8 @@ time.sleep(5),
 print("\033[95m                               4 \033[0m "),
 time.sleep(5),
 print("\033[92m                               5 \033[0m "),
-async def increment_view_count(session):
-    try:
-        async with session.get(url) as response:
-            if response.status == 200:
-                
-            
-            
-            
-
-
-
-    async with aiohttp.ClientSession() as session:
+async with aiohttp.ClientSession() as session:
+     try:
         async with session.get(url) as resp:
             if response.status == 200:
             data = await resp.text()
