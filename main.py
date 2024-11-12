@@ -8,14 +8,13 @@ import random
 import string 
 import time
 import os
-# Clear command prompt based on the operating system
-if os.name == "nt":  # Windows
-    os.system("cls")
-else:  # Unix/Linux
-    os.system("clear")
+if os.name == 'nt':
+    os.system('cls')
+else:
+    os.system('clear')
 
-# Color
-class bcolors:
+
+# Colorclass bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
@@ -85,3 +84,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
