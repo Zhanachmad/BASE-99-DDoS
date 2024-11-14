@@ -46,7 +46,7 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(
     asyncio.gather(
         *(get_cards(url) for url in urls)
-        print("\033[92m[+\033[92m]\033[31mSent\033[96mRequest\033[0m")
+        print("[+]>Status Sent")
 
  else:
                 print("Failed ping.")
